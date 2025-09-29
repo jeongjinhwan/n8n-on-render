@@ -1,0 +1,39 @@
+```mermaid
+---
+config:
+  layout: dagre
+---
+flowchart TD
+ subgraph Project["Project"]
+        B["개발 #40;TDD/DDD#41;"]
+        A["피드백 루프 #40;Self-evolving#41;"]
+        C["문의 / 이슈 대응"]
+        D["배포 & 모니터링"]
+  end
+ subgraph AI["AI"]
+        GPT["GPT / 내부 LLM"]
+        Copilot["GitHub Copilot"]
+  end
+ subgraph People["People"]
+        PM["최종 승인 / 의사결정"]
+        Dev["핵심 로직 검증 #40;언어 지식 최소#41;"]
+  end
+ subgraph Security["보안 / 내부 LLM 안전 학습"]
+        Masking["민감 데이터 마스킹"]
+        OnPrem["사내 서버에서 LLM 학습"]
+        Audit["로그 및 접근 감사"]
+  end
+    A --> B & GPT & Copilot
+    B --> C & GPT & Copilot & TDD["TDD 사이클: 테스트 → 구현 → 리팩토링"]
+    C --> D & GPT & Copilot
+    D --> A & GPT & Copilot
+    GPT --> Dev
+    Copilot --> Dev
+    Dev --> D
+    PM --> A & D
+    Masking --> OnPrem
+    OnPrem --> GPT
+    Audit --> OnPrem
+    TDD --> B
+
+```

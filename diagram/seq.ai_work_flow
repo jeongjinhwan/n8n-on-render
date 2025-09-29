@@ -1,0 +1,17 @@
+```mermaid  
+sequenceDiagram
+    participant Human as 사람
+    participant AI as AI
+
+    Human->>AI: 요건 정의 (회의, Slack, 구두, AI 피드백)
+    AI->>Human: Jira 티켓 생성
+    AI->>Human: Confluence 문서화 (정책, Flow, Sequence Diagram)
+    Human->>AI: 산출물 검토
+    AI->>Human: 스켈레톤 코드 & 테스트 코드 생성
+    Human->>AI: 코어 로직 추가 후 Commit
+    AI->>Human: Commit Diff 분석 & 정책/Flow/Diagram 검토
+    AI->>Human: 자동 Push & 배포
+    AI->>Human: 운영 모니터링 & 이상 탐지 (AIOps)
+    AI->>Human: 자동 복구 & 최적화
+    AI-->>Human: 새로운 피드백 제공 (다음 요건으로 루프)
+```

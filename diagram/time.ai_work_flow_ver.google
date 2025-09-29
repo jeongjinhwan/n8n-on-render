@@ -1,0 +1,20 @@
+```mermaid
+timeline
+    title 구글 AI 중심 개발 패러다임 (2025~2035)
+    
+    2025-2027 : AI-보조 개발 (AI-Assisted Development)
+               : - Gemini Code Assist, Copilot 기본 툴화
+               : - 코드 작성은 AI, 검증·설계는 사람
+               : - DevOps 자동화 일부 적용
+    
+    2028-2030 : AI-First Development
+               : - Jira/Confluence 자동 관리
+               : - 스켈레톤/테스트 코드 자동 생성
+               : - 운영(AIOps) 70% 자동화
+    
+    2030-2035 : Full AI-Orchestrated Development
+               : - Prompt Engineering 중심
+               : - 사람은 설계·검증·윤리 중심 역할
+               : - AI가 Dev+Ops 전 과정 수행
+
+```

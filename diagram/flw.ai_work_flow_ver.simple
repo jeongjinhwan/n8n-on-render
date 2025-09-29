@@ -1,0 +1,31 @@
+```mermaid
+flowchart TD
+  subgraph Human[사람]
+    A["요건 정의<br/>(회의, Slack, 구두)"]
+    D["AI 산출물 검토<br/>(Jira/Confluence)"]
+    F[코어 로직 추가]
+    G[소스 Commit]
+  end
+
+  subgraph AI[AI]
+    B[Jira 티켓 자동 생성]
+    C["Confluence 문서화<br/>(정책, Flow, Sequence Diagram)"]
+    E[스켈레톤 코드 & 테스트 자동 생성]
+    H["Commit Diff 분석<br/>정책/Flow/Sequence Diagram 검토"]
+    I[자동 Push & 배포]
+    J["운영 모니터링 & 이상 탐지<br/>(AIOps)"]
+    K[자동 복구 및 최적화]
+  end
+
+  A --> B
+  B --> C
+  C --> D
+  D --> E
+  E --> F
+  F --> G
+  G --> H
+  H --> I
+  I --> J
+  J --> K
+  K --> A
+```
